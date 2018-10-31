@@ -12,13 +12,6 @@ import (
 
 func (f *Fake) loadPackages() error {
 	log.Println("loading packages...")
-	config := &packages.Config{
-		Mode:  packages.LoadSyntax,
-		Dir:   f.WorkingDirectory,
-		Tests: true,
-	}
-
-	fmt.Printf("%+v", config)
 
 	p, err := packages.Load(&packages.Config{
 		Mode:  packages.LoadSyntax,
@@ -34,6 +27,7 @@ func (f *Fake) loadPackages() error {
 				err = p[i].Errors[0]
 			}
 			for j := range p[i].Errors {
+				log.Printf("%+v", p[i].Errors[j])
 				log.Printf("error loading packages: %v", strings.TrimPrefix(fmt.Sprintf("%v", p[i].Errors[j]), "-: "))
 			}
 		}
