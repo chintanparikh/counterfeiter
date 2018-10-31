@@ -1,4 +1,4 @@
-module github.com/maxbrunsfeld/counterfeiter
+module github.com/chintanparikh/counterfeiter
 
 require (
 	github.com/fsnotify/fsnotify v1.4.7 // indirect

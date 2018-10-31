@@ -1,4 +1,4 @@
-package sync // import "github.com/maxbrunsfeld/counterfeiter/fixtures/sync"
+package sync // import "github.com/chintanparikh/counterfeiter/fixtures/sync"
 
 //go:generate counterfeiter . SyncSomething
 type SyncSomething interface {

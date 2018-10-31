@@ -1,1 +1,1 @@
-module github.com/maxbrunsfeld/counterfeiter/fixtures/dup_packages
+module github.com/chintanparikh/counterfeiter/fixtures/dup_packages

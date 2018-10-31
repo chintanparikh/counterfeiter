@@ -5,8 +5,8 @@ import (
 
 	"testing"
 
-	"github.com/maxbrunsfeld/counterfeiter/fixtures"
-	"github.com/maxbrunsfeld/counterfeiter/fixtures/fixturesfakes"
+	"github.com/chintanparikh/counterfeiter/fixtures"
+	"github.com/chintanparikh/counterfeiter/fixtures/fixturesfakes"
 
 	. "github.com/onsi/gomega"
 	"github.com/sclevine/spec"

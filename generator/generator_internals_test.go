@@ -104,8 +104,8 @@ func testGenerator(t *testing.T, when spec.G, it spec.S) {
 		when("there are imports", func() {
 			it.Before(func() {
 				f.AddImport("sync", "sync")
-				f.AddImport("sync", "github.com/maxbrunsfeld/counterfeiter/fixtures/sync")
-				f.AddImport("sync", "github.com/maxbrunsfeld/counterfeiter/fixtures/othersync")
+				f.AddImport("sync", "github.com/chintanparikh/counterfeiter/fixtures/sync")
+				f.AddImport("sync", "github.com/chintanparikh/counterfeiter/fixtures/othersync")
 			})
 
 			it("always leaves the built-in sync in position 0", func() {
@@ -273,7 +273,7 @@ func testGenerator(t *testing.T, when spec.G, it spec.S) {
 				})
 
 				it("turns a vendor path into the correct import", func() {
-					i := f.AddImport("apackage", "github.com/maxbrunsfeld/counterfeiter/fixtures/vendored/vendor/apackage")
+					i := f.AddImport("apackage", "github.com/chintanparikh/counterfeiter/fixtures/vendored/vendor/apackage")
 					Expect(i.Alias).To(Equal("apackage"))
 					Expect(i.Path).To(Equal("apackage"))
 
@@ -310,15 +310,15 @@ func testGenerator(t *testing.T, when spec.G, it spec.S) {
 					f.Imports = []Import{
 						Import{
 							Alias: "dup_packages",
-							Path:  "github.com/maxbrunsfeld/counterfeiter/fixtures/dup_packages",
+							Path:  "github.com/chintanparikh/counterfeiter/fixtures/dup_packages",
 						},
 						Import{
 							Alias: "foo",
-							Path:  "github.com/maxbrunsfeld/counterfeiter/fixtures/dup_packages/a/foo",
+							Path:  "github.com/chintanparikh/counterfeiter/fixtures/dup_packages/a/foo",
 						},
 						Import{
 							Alias: "foo",
-							Path:  "github.com/maxbrunsfeld/counterfeiter/fixtures/dup_packages/b/foo",
+							Path:  "github.com/chintanparikh/counterfeiter/fixtures/dup_packages/b/foo",
 						},
 						Import{
 							Alias: "sync",
@@ -336,11 +336,11 @@ func testGenerator(t *testing.T, when spec.G, it spec.S) {
 					Expect(m["foo"]).To(ConsistOf(
 						Import{
 							Alias: "foo",
-							Path:  "github.com/maxbrunsfeld/counterfeiter/fixtures/dup_packages/a/foo",
+							Path:  "github.com/chintanparikh/counterfeiter/fixtures/dup_packages/a/foo",
 						},
 						Import{
 							Alias: "foo",
-							Path:  "github.com/maxbrunsfeld/counterfeiter/fixtures/dup_packages/b/foo",
+							Path:  "github.com/chintanparikh/counterfeiter/fixtures/dup_packages/b/foo",
 						},
 					))
 				})
@@ -353,7 +353,7 @@ func testGenerator(t *testing.T, when spec.G, it spec.S) {
 					Expect(m).To(HaveLen(4))
 					Expect(m["fooa"]).To(ConsistOf(Import{
 						Alias: "fooa",
-						Path:  "github.com/maxbrunsfeld/counterfeiter/fixtures/dup_packages/b/foo",
+						Path:  "github.com/chintanparikh/counterfeiter/fixtures/dup_packages/b/foo",
 					}))
 				})
 
@@ -362,7 +362,7 @@ func testGenerator(t *testing.T, when spec.G, it spec.S) {
 						f.Imports = []Import{
 							Import{
 								Alias: "sync",
-								Path:  "github.com/maxbrunsfeld/counterfeiter/fixtures/othersync",
+								Path:  "github.com/chintanparikh/counterfeiter/fixtures/othersync",
 							},
 							Import{
 								Alias: "sync",
@@ -370,7 +370,7 @@ func testGenerator(t *testing.T, when spec.G, it spec.S) {
 							},
 							Import{
 								Alias: "sync",
-								Path:  "github.com/maxbrunsfeld/counterfeiter/fixtures/sync",
+								Path:  "github.com/chintanparikh/counterfeiter/fixtures/sync",
 							},
 						}
 					})
@@ -387,11 +387,11 @@ func testGenerator(t *testing.T, when spec.G, it spec.S) {
 						}))
 						Expect(m["syncb"]).To(ConsistOf(Import{
 							Alias: "syncb",
-							Path:  "github.com/maxbrunsfeld/counterfeiter/fixtures/sync",
+							Path:  "github.com/chintanparikh/counterfeiter/fixtures/sync",
 						}))
 						Expect(m["synca"]).To(ConsistOf(Import{
 							Alias: "synca",
-							Path:  "github.com/maxbrunsfeld/counterfeiter/fixtures/othersync",
+							Path:  "github.com/chintanparikh/counterfeiter/fixtures/othersync",
 						}))
 					})
 				})

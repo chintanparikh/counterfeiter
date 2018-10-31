@@ -1,6 +1,6 @@
-package dup_packages // import "github.com/maxbrunsfeld/counterfeiter/fixtures/dup_packages"
+package dup_packages // import "github.com/chintanparikh/counterfeiter/fixtures/dup_packages"
 
-import "github.com/maxbrunsfeld/counterfeiter/fixtures/dup_packages/b/foo"
+import "github.com/chintanparikh/counterfeiter/fixtures/dup_packages/b/foo"
 
 //go:generate counterfeiter . DupB
 type DupB interface {

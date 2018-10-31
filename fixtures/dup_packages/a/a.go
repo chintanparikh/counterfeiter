@@ -1,6 +1,6 @@
-package a // import "github.com/maxbrunsfeld/counterfeiter/fixtures/dup_packages/a"
+package a // import "github.com/chintanparikh/counterfeiter/fixtures/dup_packages/a"
 
-import "github.com/maxbrunsfeld/counterfeiter/fixtures/dup_packages/a/foo"
+import "github.com/chintanparikh/counterfeiter/fixtures/dup_packages/a/foo"
 
 //go:generate counterfeiter . A
 type A interface {

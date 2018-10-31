@@ -1,7 +1,7 @@
 package fixtures
 
 import (
-	"github.com/maxbrunsfeld/counterfeiter/fixtures/go-hyphenpackage"
+	"github.com/chintanparikh/counterfeiter/fixtures/go-hyphenpackage"
 )
 
 //go:generate counterfeiter . ImportsGoHyphenPackage

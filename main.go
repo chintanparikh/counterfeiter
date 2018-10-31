@@ -10,8 +10,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/maxbrunsfeld/counterfeiter/arguments"
-	"github.com/maxbrunsfeld/counterfeiter/generator"
+	"github.com/chintanparikh/counterfeiter/arguments"
+	"github.com/chintanparikh/counterfeiter/generator"
 )
 
 func main() {

@@ -1,4 +1,4 @@
-# `counterfeiter` [![Build Status](https://travis-ci.org/maxbrunsfeld/counterfeiter.svg?branch=master)](https://travis-ci.org/maxbrunsfeld/counterfeiter) [![Build status](https://ci.appveyor.com/api/projects/status/0j2v7pt06lp9yanm/branch/master?svg=true)](https://ci.appveyor.com/project/maxbrunsfeld/counterfeiter/branch/master)
+# `counterfeiter` [![Build Status](https://travis-ci.org/chintanparikh/counterfeiter.svg?branch=master)](https://travis-ci.org/chintanparikh/counterfeiter) [![Build status](https://ci.appveyor.com/api/projects/status/0j2v7pt06lp9yanm/branch/master?svg=true)](https://ci.appveyor.com/project/chintanparikh/counterfeiter/branch/master)
 
 When writing unit-tests for an object, it is often useful to have fake implementations
 of the object's collaborators. In go, such fake implementations cannot be generated
@@ -9,7 +9,7 @@ automatically at runtime, and writing them by hand can be quite arduous.
 ### Install
 
  ```shell
-go get -u github.com/maxbrunsfeld/counterfeiter
+go get -u github.com/chintanparikh/counterfeiter
 ```
 
 ### Generating Test Doubles
@@ -65,7 +65,7 @@ Expect(num).To(Equal(3))
 Expect(err).To(Equal(errors.New("the-error")))
 ```
 
-For more examples of using the `counterfeiter` API, look at [some of the provided examples](https://github.com/maxbrunsfeld/counterfeiter/blob/master/counterfeiter_test.go).
+For more examples of using the `counterfeiter` API, look at [some of the provided examples](https://github.com/chintanparikh/counterfeiter/blob/master/counterfeiter_test.go).
 
 ### Using `go generate`
 

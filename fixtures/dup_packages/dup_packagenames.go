@@ -1,8 +1,8 @@
-package dup_packages // import "github.com/maxbrunsfeld/counterfeiter/fixtures/dup_packages"
+package dup_packages // import "github.com/chintanparikh/counterfeiter/fixtures/dup_packages"
 
 import (
-	"github.com/maxbrunsfeld/counterfeiter/fixtures/dup_packages/a/foo"
-	bfoo "github.com/maxbrunsfeld/counterfeiter/fixtures/dup_packages/b/foo"
+	"github.com/chintanparikh/counterfeiter/fixtures/dup_packages/a/foo"
+	bfoo "github.com/chintanparikh/counterfeiter/fixtures/dup_packages/b/foo"
 )
 
 //go:generate counterfeiter . AB

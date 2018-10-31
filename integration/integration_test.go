@@ -24,7 +24,7 @@ var (
 
 func TestMain(m *testing.M) {
 	var err error
-	pathToCounterfeiter, err = gexec.Build("github.com/maxbrunsfeld/counterfeiter")
+	pathToCounterfeiter, err = gexec.Build("github.com/chintanparikh/counterfeiter")
 	if err != nil {
 		panic(err)
 	}
