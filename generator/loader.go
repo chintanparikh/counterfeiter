@@ -12,8 +12,14 @@ import (
 
 func (f *Fake) loadPackages() error {
 	log.Println("loading packages...")
-	log.Println("Working directory is")
-	log.Println(f.WorkingDirectory)
+	config := &packages.Config{
+		Mode:  packages.LoadSyntax,
+		Dir:   f.WorkingDirectory,
+		Tests: true,
+	}
+
+	fmt.Printf("%+v", config)
+
 	p, err := packages.Load(&packages.Config{
 		Mode:  packages.LoadSyntax,
 		Dir:   f.WorkingDirectory,
@@ -41,7 +47,6 @@ func (f *Fake) loadPackages() error {
 }
 
 func (f *Fake) findPackage() error {
-	log.Printf("GOT HERE -----------")
 	var target *types.TypeName
 	var pkg *packages.Package
 	for i := range f.Packages {
