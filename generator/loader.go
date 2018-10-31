@@ -39,6 +39,7 @@ func (f *Fake) loadPackages() error {
 }
 
 func (f *Fake) findPackage() error {
+	log.Printf("GOT HERE -----------")
 	var target *types.TypeName
 	var pkg *packages.Package
 	for i := range f.Packages {
