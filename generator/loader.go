@@ -12,6 +12,8 @@ import (
 
 func (f *Fake) loadPackages() error {
 	log.Println("loading packages...")
+	log.Println("Working directory is")
+	log.Println(f.WorkingDirectory)
 	p, err := packages.Load(&packages.Config{
 		Mode:  packages.LoadSyntax,
 		Dir:   f.WorkingDirectory,
